@@ -32,12 +32,9 @@ export default function Checkout() {
 
   function handleClose() {
     userProgressCtx.hideCheckout();
-    // console.log(customerData);
-    // console.log(cartCtx);
   }
 
   function handleFinish() {
-    //console.log(cartCtx.items);
     userProgressCtx.hideCheckout();
     cartCtx.clearCart();
     clearData();
@@ -49,9 +46,7 @@ export default function Checkout() {
     console.log("ordercustomerData ---- ", customerData);
 
     await sendRequest(
-      // JSON.stringify(
       {
-          //id: 1,
           customer: {
             name: customerData.name,
             email: customerData.email
@@ -67,10 +62,7 @@ export default function Checkout() {
           street: customerData.street,
           city: customerData.city, 
           zip: customerData.zip,
-          //items: cartCtx.items,
-          //customer: customerData,
       }
-      // )
     );
   }
 
