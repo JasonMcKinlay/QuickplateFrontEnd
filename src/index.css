@@ -17,6 +17,10 @@ body {
   font-size: 14px;
 }
 
+#cart-icon {
+  width: 2.5rem;
+}
+
 #main-header {
   display: flex;
   justify-content: space-between;

@@ -4,6 +4,7 @@ import Button from './UI/Button.jsx';
 import logoImg from '../assets/quickplate.png';
 import CartContext from '../store/CartContext.jsx';
 import UserProgressContext from '../store/UserProgressContext.jsx';
+import cartImg from '../assets/cart.svg';
 
 export default function Header() {
   const cartCtx = useContext(CartContext);
@@ -25,7 +26,12 @@ export default function Header() {
       </div>
       <nav>
         <Button textOnly onClick={handleShowCart}>
-          Cart ({totalCartItems})
+          <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <span style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.1rem' }}>
+              {totalCartItems}
+            </span>
+            <img src={cartImg} alt="Cart icon" id="cart-icon" />
+          </span>
         </Button>
       </nav>
     </header>
