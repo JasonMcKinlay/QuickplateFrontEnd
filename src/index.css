@@ -313,3 +313,21 @@ h1 {
     transform: translateY(0);
   }
 }
+
+@keyframes cartPop {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  20% {
+    transform: scale(1.18);
+    filter: brightness(1.35);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+.cart-pop {
+  animation: cartPop 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
