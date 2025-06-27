@@ -32,6 +32,9 @@ export default function Cart() {
     >
       <h2>Your Cart</h2>
       <ul>
+        {cartCtx.items.length === 0 && (
+          <li style={{ textAlign: 'center', color: '#8c8985', paddingTop: '10px' }}>Your cart is empty. Let's fix that!</li>
+        )}
         {cartCtx.items.map((item) => (
           <CartItem
             key={item.id}

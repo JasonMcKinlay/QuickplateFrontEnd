@@ -40,6 +40,7 @@ export default function Header() {
           onClick={handleShowCart}
           className={pop ? 'cart-pop' : ''}
           style={{ transition: 'filter 0.3s, transform 0.3s' }}
+          id="cart-button"
         >
           <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
             <span style={{ fontSize: '1rem', fontWeight: 'bold', marginBottom: '0.1rem' }}>

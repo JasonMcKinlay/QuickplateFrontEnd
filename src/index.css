@@ -10,7 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: linear-gradient(#29251c, #2c2306); */
-  background: linear-gradient(#251f1f, #251818);
+  /* background: linear-gradient(#251f1f, #251818); */
+  background: #251f1f;
   color: #ebe8e2;
   /* line-height: 150%; */
   min-height: 100vh;
@@ -21,7 +22,16 @@ body {
   width: 2.5rem;
 }
 
+#cart-button:hover,
+#cart-button:active {
+  filter: brightness(0.7);
+}
+
 #main-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(#3d3333, #2b2424, #251f1f);
+  box-shadow: 0 14px 18px #251f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -331,3 +341,4 @@ h1 {
 .cart-pop {
   animation: cartPop 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
